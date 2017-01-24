@@ -1,0 +1,18 @@
+group 'com.samples'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework:spring-context:+'
+    compile 'org.springframework:spring-webmvc:+'
+    compile 'org.apache.cxf:cxf-rt-frontend-jaxws:+'
+    compile 'org.apache.cxf:cxf-rt-transports-http:+'
+}

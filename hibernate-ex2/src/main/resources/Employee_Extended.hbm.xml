@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.samples.hibernate.ex3.EmployeeExt" table="employee_full_details">
+        <id name="id" type="int" column="id">
+            <generator class="native" />
+        </id>
+        <property name="name" type="string" column="name" />
+        <property name="position" type="string" column="position"/>
+        <component name="addressExt"  class="com.samples.hibernate.ex3.AddressExt">
+            <property name="addr_st" column="addr_st"/>
+            <property name="addr_city" column="addr_city"/>
+            <property name="addr_state" column="addr_state"/>
+            <property name="addr_zip" column="addr_zip"/>
+
+        </component>
+    </class>
+
+</hibernate-mapping>
